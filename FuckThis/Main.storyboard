@@ -724,12 +724,12 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PQ8-fg-HYw">
-                                <rect key="frame" x="104" y="234" width="51" height="16"/>
+                                <rect key="frame" x="104" y="234" width="255" height="16"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="lC6-LH-F8f"/>
-                                    <constraint firstAttribute="width" constant="47" id="ty5-fa-45o"/>
+                                    <constraint firstAttribute="width" constant="251" id="WbT-3O-EAQ"/>
+                                    <constraint firstAttribute="height" constant="16" id="fol-yQ-tK6"/>
                                 </constraints>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="It sucks" id="tX6-Wy-JiO">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="It sucks fuck you fuck your mother fuck it" id="tX6-Wy-JiO">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -737,10 +737,18 @@
                             </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="PQ8-fg-HYw" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="3iS-nE-ECo"/>
+                            <constraint firstItem="PQ8-fg-HYw" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="4BP-qi-3b8"/>
+                            <constraint firstItem="PQ8-fg-HYw" firstAttribute="leading" secondItem="t6b-VT-vaq" secondAttribute="trailing" constant="8" id="63T-8g-kLJ"/>
                             <constraint firstItem="t6b-VT-vaq" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="11" id="8rX-2J-QRN"/>
+                            <constraint firstItem="PQ8-fg-HYw" firstAttribute="leading" secondItem="t6b-VT-vaq" secondAttribute="trailing" constant="8" id="KoO-jN-Wrj"/>
                             <constraint firstItem="PQ8-fg-HYw" firstAttribute="leading" secondItem="t6b-VT-vaq" secondAttribute="trailing" constant="8" id="OW8-1k-p4j"/>
+                            <constraint firstItem="PQ8-fg-HYw" firstAttribute="leading" secondItem="t6b-VT-vaq" secondAttribute="trailing" constant="8" id="S0k-li-EAU"/>
+                            <constraint firstItem="PQ8-fg-HYw" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="22" id="YAg-Bg-d0j"/>
+                            <constraint firstItem="PQ8-fg-HYw" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="c8d-l4-uJv"/>
                             <constraint firstItem="t6b-VT-vaq" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="cfU-a4-FRh"/>
                             <constraint firstItem="PQ8-fg-HYw" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="jS6-aM-lqY"/>
+                            <constraint firstItem="PQ8-fg-HYw" firstAttribute="leading" secondItem="t6b-VT-vaq" secondAttribute="trailing" constant="17" id="k7Z-d4-Dvw"/>
                         </constraints>
                         <connections>
                             <outlet property="ClickedLabel1" destination="PQ8-fg-HYw" id="Lon-M6-sGV"/>
