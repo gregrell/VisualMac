@@ -15,6 +15,9 @@ namespace FuckThis
 		[Outlet]
 		AppKit.NSTextField ClickedLabel1 { get; set; }
 
+		[Outlet]
+		AppKit.NSScrollView DocumentEditor { get; set; }
+
 		[Action ("ClickedButton:")]
 		partial void ClickedButton (Foundation.NSObject sender);
 		
@@ -23,6 +26,11 @@ namespace FuckThis
 			if (ClickedLabel1 != null) {
 				ClickedLabel1.Dispose ();
 				ClickedLabel1 = null;
+			}
+
+			if (DocumentEditor != null) {
+				DocumentEditor.Dispose ();
+				DocumentEditor = null;
 			}
 		}
 	}

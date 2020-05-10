@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -683,12 +683,27 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                <windowController id="B8D-0N-5wS" customClass="WindowController" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA" customClass="WindowContoller">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <toolbar key="toolbar" implicitIdentifier="C594847B-3679-4557-8F44-36FEA4E384F9" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="xmc-AB-kmI">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="pOw-07-Pk0"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="kma-g6-dRE"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="t4k-dK-bdm"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="AFF-qr-08i"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="uGS-D1-uSD"/>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="pOw-07-Pk0"/>
+                                <toolbarItem reference="kma-g6-dRE"/>
+                                <toolbarItem reference="uGS-D1-uSD"/>
+                                <toolbarItem reference="t4k-dK-bdm"/>
+                            </defaultToolbarItems>
+                        </toolbar>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -735,8 +750,35 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvi-Kf-ljh">
+                                <rect key="frame" x="11" y="10" width="461" height="216"/>
+                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="84e-WV-3wR">
+                                    <rect key="frame" x="0.0" y="0.0" width="461" height="216"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="XDn-Gy-xkk">
+                                            <rect key="frame" x="0.0" y="0.0" width="461" height="216"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="461" height="216"/>
+                                            <size key="maxSize" width="462" height="10000000"/>
+                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="jnR-iV-okW">
+                                    <rect key="frame" x="-100" y="-100" width="240" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="xsa-oZ-aPf">
+                                    <rect key="frame" x="445" y="0.0" width="16" height="216"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rvi-Kf-ljh" secondAttribute="trailing" constant="8" id="2wM-Yl-GrQ"/>
                             <constraint firstItem="PQ8-fg-HYw" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="3iS-nE-ECo"/>
                             <constraint firstItem="PQ8-fg-HYw" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="4BP-qi-3b8"/>
                             <constraint firstItem="PQ8-fg-HYw" firstAttribute="leading" secondItem="t6b-VT-vaq" secondAttribute="trailing" constant="8" id="63T-8g-kLJ"/>
@@ -744,11 +786,10 @@
                             <constraint firstItem="PQ8-fg-HYw" firstAttribute="leading" secondItem="t6b-VT-vaq" secondAttribute="trailing" constant="8" id="KoO-jN-Wrj"/>
                             <constraint firstItem="PQ8-fg-HYw" firstAttribute="leading" secondItem="t6b-VT-vaq" secondAttribute="trailing" constant="8" id="OW8-1k-p4j"/>
                             <constraint firstItem="PQ8-fg-HYw" firstAttribute="leading" secondItem="t6b-VT-vaq" secondAttribute="trailing" constant="8" id="S0k-li-EAU"/>
-                            <constraint firstItem="PQ8-fg-HYw" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="22" id="YAg-Bg-d0j"/>
-                            <constraint firstItem="PQ8-fg-HYw" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="c8d-l4-uJv"/>
+                            <constraint firstItem="rvi-Kf-ljh" firstAttribute="top" secondItem="t6b-VT-vaq" secondAttribute="bottom" constant="3" id="ahl-Bv-tpu"/>
                             <constraint firstItem="t6b-VT-vaq" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="cfU-a4-FRh"/>
-                            <constraint firstItem="PQ8-fg-HYw" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="jS6-aM-lqY"/>
-                            <constraint firstItem="PQ8-fg-HYw" firstAttribute="leading" secondItem="t6b-VT-vaq" secondAttribute="trailing" constant="17" id="k7Z-d4-Dvw"/>
+                            <constraint firstAttribute="bottom" secondItem="rvi-Kf-ljh" secondAttribute="bottom" constant="10" id="ePM-GF-Mdy"/>
+                            <constraint firstItem="rvi-Kf-ljh" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="11" id="jpo-tt-gsL"/>
                         </constraints>
                         <connections>
                             <outlet property="ClickedLabel1" destination="PQ8-fg-HYw" id="Lon-M6-sGV"/>
@@ -756,6 +797,7 @@
                     </view>
                     <connections>
                         <outlet property="ClickedLabel1" destination="PQ8-fg-HYw" id="NDo-1q-PzL"/>
+                        <outlet property="DocumentEditor" destination="rvi-Kf-ljh" id="mK7-HA-TVu"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

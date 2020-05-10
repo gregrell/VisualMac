@@ -37,5 +37,12 @@ namespace FuckThis
         {
             ClickedLabel1.StringValue = string.Format("Fuck Mac {0} times", ++numberPfTimesClicked, numberPfTimesClicked);
         }
+
+        public override void ViewWillAppear()
+        {
+            base.ViewWillAppear();
+            //set window title
+            this.View.Window.Title = "untitled";
+        }
     }
 }
